@@ -8,6 +8,7 @@ void print(Arg &&arg, Args &&...args)
 {
     std::cout << std::forward<Arg>(arg);
     ((std::cout << ' ' << std::forward<Args>(args)), ...);
+    std::cout << '\n';
 }
 
 int main()
